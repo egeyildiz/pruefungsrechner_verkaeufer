@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prüfungsrechner für Verkäufer</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Prüfungsrechner für Verkäufer</h1>
+    </header>
+
+    <main>
+        <!-- Flex-Container für den Rechner und die Informationsboxen -->
+        <div id="main-content-wrapper">
+            <!-- Tabelle und Ergebnis -->
+            <div id="calculator-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fach</th>
+                            <th>Punkte</th>
+                            <th>MEPR</th>
+                            <th>Faktor</th>
+                            <th>Ergebnis</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Verkauf- und Werbemaßnahmen (Teil 1)</td>
+                            <td><input type="number" id="punkte1" min="0" max="100"></td>
+                            <td><input type="number" id="mepr1" min="0" max="100"></td>
+                            <td style="text-align: center;">25</td>
+                            <td id="ergebnis1_1" style="text-align: right;">-</td>
+                            <td id="note1" style="text-align: center;">-</td>
+                        </tr>
+                        <tr>
+                            <td>Warenwirtschaft und Kalkulation (Teil 2)</td>
+                            <td><input type="number" id="punkte2" min="0" max="100"></td>
+                            <td><input type="number" id="mepr2" min="0" max="100"></td>
+                            <td style="text-align: center;">15</td>
+                            <td id="ergebnis1_2" style="text-align: right;">-</td>
+                            <td id="note2" style="text-align: center;">-</td>
+                        </tr>
+                        <tr>
+                            <td>Wirtschaft- und Sozialkunde (Teil 3)</td>
+                            <td><input type="number" id="punkte3" min="0" max="100"></td>
+                            <td><input type="number" id="mepr3" min="0" max="100"></td>
+                            <td style="text-align: center;">10</td>
+                            <td id="ergebnis1_3" style="text-align: right;">-</td>
+                            <td id="note3" style="text-align: center;">-</td>
+                        </tr>
+                        <tr>
+                            <td>Fachgespräch in der Wahlqualifikation</td>
+                            <td><input type="number" id="punkte4" min="0" max="100"></td>
+                            <td></td>
+                            <td style="text-align: center;">50</td>
+                            <td id="ergebnis1_4" style="text-align: right;">-</td>
+                            <td id="note4" style="text-align: center;">-</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" style="text-align: right;">Summe der Ergebnisse</td>
+                            <td id="summe-ergebnisse" style="text-align: right;">0</td>
+                            <td><button id="berechnen-btn">Berechnen</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div id="ergebnis-container">
+                    <p id="ergebnis">Prüfung: -</p>
+                </div>
+            </div>
+            <!-- Info- und Regelbox -->
+            <div id="info-rules-wrapper">
+                <div id="info-box">
+                    <p>
+                        Dieser Prüfungsrechner hilft Ihnen, die Noten und das Gesamtergebnis für Ihre Prüfung zu berechnen.
+                        Geben Sie Ihre erzielten Punkte in den jeweiligen Prüfungsbereichen ein, und klicken Sie auf 
+                        <strong>"Berechnen"</strong>, um das Ergebnis zu sehen. 
+                    </p>
+                    <p>
+                        <strong>Hinweis:</strong> Um die Prüfung zu bestehen, benötigen Sie einen Durchschnitt von mindestens 70 Punkten.
+                    </p>
+                </div>
+                <div id="rules-box">
+                    <h2>Wichtige Informationen zur Abschlussprüfung</h2>
+                    <p><strong>Verkäufer (m/w/d)</strong><br>Ausbildungsordnung vom 01.08.2017</p>
+                    <p>
+                        Die Abschlussprüfung ist bestanden, wenn die Prüfungsleistungen wie folgt bewertet worden sind:
+                    </p>
+                    <ol>
+                        <li>im Gesamtergebnis mit mindestens „ausreichend",</li>
+                        <li>im Prüfungsbereich Fachgespräch in der Wahlqualifikation mit mindestens „ausreichend",</li>
+                        <li>in mindestens zwei weiteren Prüfungsbereichen mit mindestens „ausreichend", und</li>
+                        <li>in keinem Prüfungsbereich mit „ungenügend".</li>
+                    </ol>
+                    <p>
+                        Auf Antrag des Prüflings ist die Prüfung in einem der Prüfungsbereiche „Verkauf und Werbemaßnahmen", 
+                        „Warenwirtschaft und Kalkulation" oder „Wirtschafts- und Sozialkunde" durch eine mündliche Prüfung 
+                        von etwa 15 Minuten zu ergänzen, wenn:
+                    </p>
+                    <ul>
+                        <li>der Prüfungsbereich schlechter als mit „ausreichend" bewertet worden ist, und</li>
+                        <li>die mündliche Ergänzungsprüfung für das Bestehen der Abschlussprüfung den Ausschlag geben kann.</li>
+                    </ul>
+                    <p>
+                        Bei der Ermittlung des Ergebnisses für diesen Prüfungsbereich sind das bisherige Ergebnis und 
+                        das Ergebnis der mündlichen Ergänzungsprüfung im Verhältnis 2:1 zu gewichten.
+                    </p>
+                    <p><strong>MEPR = mündliche Ergänzungsprüfung</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+<footer>
+    <p>&#169; 2024 - Ege Yıldız. Alle Rechte vorbehalten. - Textquelle: <a href="https://www.ihk.de/koeln/" target="_blank">IHK Köln</a></p>
+    <p>
+        Weitere Informationen finden Sie auf der offiziellen Webseite der 
+        <a href="https://www.ihk.de/koeln/hauptnavigation/ausbildung/ausbildungsberufe-a-bis-z/verkaeufer-in-5220326" target="_blank" rel="noopener noreferrer">IHK Köln</a>. 
+        Der Link führt zu einer externen Webseite.
+    </p>
+</footer>
+</html>

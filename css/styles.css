@@ -1,0 +1,214 @@
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ddd;
+    background-color: #222; /* Dunkler Hintergrund */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #444; /* Dunkleres Header-Hintergrund */
+    color: #fff;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #555; /* Dunkler Button-Hintergrund */
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #777; /* Leicht hellere Farbe bei Hover */
+}
+
+/* Container für Tabelle und Info-Box */
+#main-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass die Info-Boxen unter der Tabelle erscheinen */
+    gap: 2rem; /* Abstand zwischen Tabelle und Info-Boxen */
+    margin: 2rem;
+}
+
+#calculator-wrapper {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #444; /* Dunkler Rand */
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #333; /* Dunkleres Hintergrund für Tabellenkopf */
+    color: #fff;
+}
+
+td input {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid #555; /* Dunkler Rand */
+    border-radius: 5px;
+    background-color: #444; /* Dunkler Hintergrund für Input-Felder */
+    color: #ddd; /* Helle Schriftfarbe */
+}
+
+/* Entfernt die Pfeile in den number-input-Feldern */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Button in der Tabellenzelle */
+#berechnen-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+#berechnen-btn:hover {
+    background-color: #666;
+}
+
+/* Ergebnis */
+#ergebnis-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#ergebnis {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.erfolg {
+    color: #4caf50; /* Grüner Text für Erfolg */
+    font-weight: bold;
+}
+
+.nicht-erfolg {
+    color: #f44336; /* Roter Text für Misserfolg */
+    font-weight: bold;
+}
+
+#summe-ergebnisse {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Info-Boxen */
+#info-rules-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Abstand zwischen den Boxen */
+}
+
+#info-box, #rules-box {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #444;
+    color: #ddd;
+    border: 1px solid #555;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Überschrift in der Regeln-Box */
+#rules-box h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Listenstile */
+#rules-box ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    list-style-type: decimal;
+}
+
+#rules-box ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    list-style-type: disc;
+}
+
+#rules-box li {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    #main-content-wrapper {
+        gap: 1rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;  /* Dunkler Hintergrund */
+    color: #bbb;  /* Helle Schriftfarbe */
+    font-size: 0.9rem;  /* Kleinere Schriftgröße */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* sorgt dafür, dass der Footer immer am Ende der Seite bleibt */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Linkfarbe für Info-Boxen */
+a {
+    color: #ddd; /* Helle Farbe für Links */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+a:hover {
+    color: #fff; /* Helle Farbe bei Hover */
+}
+
+a + p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 0.5rem;
+}
