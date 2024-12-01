@@ -17,7 +17,7 @@ Dieses Projekt ist ein interaktiver Rechner, der es ermöglicht, die Noten und E
 - Das Gesamtergebnis und die Note werden automatisch berechnet und angezeigt.
 
 ## Lizenz
-Dieses Projekt steht unter der MIT-Lizenz - siehe die [LICENSE](LICENSE) Datei für Details.
+Dieses Projekt steht unter der MIT-Lizenz - siehe die [LICENSE](LICENSE.md) Datei für Details.
 
 ## Haftungsausschluss
 Die Berechnungen in diesem Rechner sind zur Orientierung gedacht und dienen nur als Anhaltspunkt. Sie ersetzen keine offiziellen Noten oder Prüfungsergebnisse.
